@@ -1,0 +1,20 @@
+.about .text h2 {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.about .text h3 {
+	font-size: 34px;
+	font-weight: bold;
+}
+
+.about .text p {
+	font-size: 20px;
+	max-width: 40rem;
+}
+
+.about .photo img {
+	border-radius: 4rem;
+	border: 2px solid #33095e;
+	max-width: 20rem;
+}

@@ -28,8 +28,8 @@ export default function Navbar() {
 			className="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
 		>
 			<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-				<div className="relative flex h-16 items-center justify-between">
-					<div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+				<div className="relative flex h-14 items-center justify-between sm:h-20">
+					<div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
 						{/* Mobile menu button*/}
 						<DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
 							<span className="absolute -inset-0.5" />
@@ -39,15 +39,15 @@ export default function Navbar() {
 						</DisclosureButton>
 					</div>
 					<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-						<div className="flex shrink-0 items-center">
+						<div className="flex shrink-0 items-center gap-4">
 							<a href="">
-								<img alt="Anna Zoi" src="/logo-white.svg" className="h-10 w-auto" />
+								<img alt="Anna Zoi" src="/logo-1.svg" className="h-10 w-auto" />
 							</a>
-							<a href="">
+							<a href="" className="hidden md:block">
 								<span>anna.zoi@yahoo.com</span>
 							</a>
 						</div>
-						<div className="hidden sm:ml-6 sm:block">
+						<div className="hidden sm:ml-auto sm:block">
 							<div className="flex space-x-4">
 								{navigation.map((item) => (
 									<a
