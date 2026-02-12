@@ -13,8 +13,72 @@
 	max-width: 40rem;
 }
 
+.about .text .link {
+	border: 1px solid #33095e;
+	padding: 0.8rem 1.5rem;
+	border-radius: 20rem;
+	transition: all 0.3s linear;
+	margin-top: 1rem;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	width: fit-content;
+	cursor: pointer;
+}
+
+.about .text button {
+	cursor: pointer;
+}
+
+.about .text .link:hover {
+	background-color: #33095e;
+}
+
 .about .photo img {
 	border-radius: 4rem;
 	border: 2px solid #33095e;
 	max-width: 20rem;
+	transition: border 0.3s linear;
+}
+
+.about .photo img:hover {
+	border: 2px solid #744484;
+}
+
+.about .statics {
+	display: flex;
+	justify-content: space-between;
+	/* gap: 3rem; */
+}
+
+.about .statics div {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.about .statics p {
+	font-size: 60px;
+	/* font-weight: bold; */
+}
+
+.about .statics span {
+	max-width: 7rem;
+	/* font-size: 20px; */
+}
+
+@media screen and (max-width: 1024px) {
+	.about .text h2,
+	.about .text h3,
+	.about .text p {
+		text-align: center;
+	}
+
+	.about .text a {
+		margin: auto;
+	}
+
+	.about .text p {
+		max-width: unset;
+	}
 }
