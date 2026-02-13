@@ -1,4 +1,5 @@
 'use client';
+
 import './style.css';
 import zivo from '../assets/zivo.png';
 import Image from 'next/image';
