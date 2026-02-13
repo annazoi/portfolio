@@ -67,6 +67,18 @@
 	/* font-size: 20px; */
 }
 
+.project {
+	border: 1rem solid #18052b;
+	width: 35rem;
+	border-radius: 10px;
+	height: 25rem;
+	transition: all 0.3s linear;
+}
+
+.project:hover {
+	border: 0.8rem solid #18052b;
+}
+
 @media screen and (max-width: 1024px) {
 	.about .text h2,
 	.about .text h3,

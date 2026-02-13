@@ -43,8 +43,8 @@ const About = () => {
 					<span>Years of Experience</span>
 				</div>
 				<div>
-					<p>1</p>
-					<span>Internship Completed</span>
+					<p>5+</p>
+					<span>Full-Stack Applications</span>
 				</div>
 			</div>
 		</div>

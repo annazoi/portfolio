@@ -1,4 +1,5 @@
 import About from '@/components/about';
+import Projects from '@/components/projects';
 import Navbar from '@/components/ui/navbar';
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
 			<Navbar />
 			<main>
 				<About />
+				<Projects />
 			</main>
 
 			<footer></footer>
