@@ -3,10 +3,19 @@
 import './style.css';
 import photo from '../assets/photo.png';
 import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
+import CountUp from 'react-countup';
 
 import Tilt from 'react-parallax-tilt';
 
 const About = () => {
+	const stats = [
+		{ value: 10, label: 'Projects Built', suffix: '+' },
+		{ value: 14, label: 'Live Websites', suffix: '+' },
+		{ value: 5, label: 'Years of Experience', suffix: '+' },
+		{ value: 5, label: 'Full-Stack Applications', suffix: '+' },
+	];
+
 	return (
 		<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-20 about flex flex-col gap-20">
 			<div className="flex flex-col-reverse items-center gap-10 lg:flex-row lg:gap-20">
@@ -29,23 +38,23 @@ const About = () => {
 					</Tilt>
 				</div>
 			</div>
-			<div className="statics">
-				<div>
-					<p>10+ </p>
-					<span>Projects Built</span>
-				</div>
-				<div>
-					<p>14+ </p>
-					<span>Live Websites</span>
-				</div>
-				<div>
-					<p>5+</p>
-					<span>Years of Experience</span>
-				</div>
-				<div>
-					<p>5+</p>
-					<span>Full-Stack Applications</span>
-				</div>
+			<div className="statics grid grid-cols-2 md:grid-cols-4 gap-8">
+				{stats.map((item, index) => (
+					<motion.div
+						key={index}
+						initial={{ opacity: 0, y: -40 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6, delay: index * 0.2 }}
+						viewport={{ once: true, amount: 0.5 }}
+						className="text-center"
+					>
+						<p className="text-3xl font-bold text-indigo-600">
+							<CountUp end={item.value} duration={2.5} enableScrollSpy />
+							{item.suffix}
+						</p>
+						<span className="text-gray-500">{item.label}</span>
+					</motion.div>
+				))}
 			</div>
 		</div>
 	);
