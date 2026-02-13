@@ -43,7 +43,7 @@ export default function Navbar() {
 							<a href="">
 								<img alt="Anna Zoi" src="/logo-1.svg" className="h-10 w-auto" />
 							</a>
-							<a href="" className="hidden md:block">
+							<a href="mailto:anna.zoi@yahoo.com" className="hidden md:block">
 								<span>anna.zoi@yahoo.com</span>
 							</a>
 						</div>

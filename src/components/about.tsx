@@ -4,10 +4,9 @@ import './style.css';
 import photo from '../assets/photo.png';
 import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
-// import CountUp from 'react-countup';
+import CountUp from 'react-countup';
 import Image from 'next/image';
-// import Tilt from 'react-parallax-tilt';
-import dynamic from 'next/dynamic';
+import Tilt from 'react-parallax-tilt';
 
 const About = () => {
 	const stats = [
@@ -16,9 +15,6 @@ const About = () => {
 		{ value: 5, label: 'Years of Experience', suffix: '+' },
 		{ value: 5, label: 'Full-Stack Applications', suffix: '+' },
 	];
-
-	const CountUp = dynamic(() => import('react-countup'), { ssr: false });
-	const Tilt = dynamic(() => import('react-parallax-tilt'), { ssr: false });
 
 	return (
 		<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-20 about flex flex-col gap-20">
@@ -46,7 +42,7 @@ const About = () => {
 				{stats.map((item, index) => (
 					<motion.div
 						key={index}
-						initial={false}
+						initial={{ opacity: 0, y: -40 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: index * 0.2 }}
 						viewport={{ once: true, amount: 0.5 }}

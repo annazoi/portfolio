@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
+import { desc } from 'framer-motion/m';
 
 const Projects = () => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -15,18 +17,21 @@ const Projects = () => {
 			id: 1,
 			name: 'Zivo',
 			photo: zivo,
+			description: 'Focused on real-time collaboration, secure messaging, and smart AI assistants.',
 			url: 'https://chat-ionic.vercel.app/',
 		},
 		{
 			id: 2,
 			name: 'name',
 			photo: zivo,
+			description: 'desc',
 			url: 'https://chat-ionic.vercel.app/',
 		},
 		{
 			id: 3,
 			name: 'name',
 			photo: zivo,
+			description: 'desc',
 			url: 'https://chat-ionic.vercel.app/',
 		},
 	];
@@ -34,11 +39,7 @@ const Projects = () => {
 	return (
 		<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-20 about flex flex-col gap-10 projects">
 			<h3 className="text-center">My Projects</h3>
-			<div
-				className="m-auto grid 
-			
-			grid-cols-1  lg:grid-cols-2 gap-5 lg:gap-10"
-			>
+			<div className="m-auto grid grid-cols-1  lg:grid-cols-2 gap-5 lg:gap-10">
 				{projects.map((project: any) => {
 					return (
 						<motion.div className="project" key={project.id} whileHover="hovered">
@@ -57,9 +58,7 @@ const Projects = () => {
 								>
 									<div className="flex flex-col gap-4">
 										<span className="font-semibold">{project.name}</span>
-										<span className="text-sm max-w-100">
-											Focused on real-time collaboration, secure messaging, and smart AI assistants.
-										</span>
+										<span className="text-sm max-w-100">{project.description}</span>
 									</div>
 
 									<ArrowUpRightIcon className="h-5 w-5 mt-2 ml-auto" />
