@@ -5,7 +5,7 @@ import photo from '../assets/photo.png';
 import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
-
+import Image from 'next/image';
 import Tilt from 'react-parallax-tilt';
 
 const About = () => {
@@ -24,7 +24,7 @@ const About = () => {
 					<h2>Full-Stack Developer.</h2>
 					<p>I turn complex ideas into intuitive, high-performing digital products.</p>
 					<div>
-						<div className="max-w-fit m-auto lg:ml-0 mt-6 link">
+						<div className="max-w-fit m-auto lg:ml-0 mt-6 link ">
 							<button>Download CV</button>
 							<ArrowDownTrayIcon className="size-4 m-auto" />
 						</div>
@@ -34,7 +34,7 @@ const About = () => {
 				</div>
 				<div className="photo m-auto md:ml-auto">
 					<Tilt glareEnable={false} glareMaxOpacity={0} scale={1} tiltMaxAngleX={8} tiltMaxAngleY={8}>
-						<img src={photo.src} alt="Anna Zoi" />
+						<Image src={photo} alt="Anna Zoi" />
 					</Tilt>
 				</div>
 			</div>
