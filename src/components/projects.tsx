@@ -1,13 +1,11 @@
 'use client';
 
 import './style.css';
-import zivo from '../assets/zivo.png';
+import zivo from '../assets/projects/zivo.png';
 import Image from 'next/image';
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import dynamic from 'next/dynamic';
-import { desc } from 'framer-motion/m';
 
 const Projects = () => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -44,7 +42,7 @@ const Projects = () => {
 					return (
 						<motion.div className="project" key={project.id} whileHover="hovered">
 							<div>
-								<Image src={project.photo} alt="" />
+								<Image src={project.photo} alt={project.name} />
 							</div>
 							<a href={project.url} target="_blank" rel="noopener noreferrer">
 								<motion.div

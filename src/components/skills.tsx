@@ -1,133 +1,142 @@
 'use client';
+import react from '../assets/skills/react.png';
+import javascript from '../assets/skills/javascript.png';
+
+import Image from 'next/image';
 
 const Skills = () => {
 	const skills = [
 		{
 			name: 'ReactJS',
-			photo: '',
+			photo: react,
 		},
 		{
 			name: 'Javascript',
-			photo: '',
+			photo: javascript,
 		},
 		{
 			name: 'NextJS',
-			photo: '',
+			photo: '../assets/skills/nextjs.png',
 		},
 		{
 			name: 'HTML',
-			photo: '',
+			photo: '../assets/skills/html.png',
 		},
 		{
 			name: 'CSS',
-			photo: '',
+			photo: '../assets/skills/css.png',
 		},
 		{
 			name: 'Firabase',
-			photo: '',
+			photo: '../assets/skills/firabase.png',
 		},
 		{
 			name: 'MongoDB',
-			photo: '',
+			photo: '../assets/skills/mongodb.png',
 		},
 		{
 			name: 'MariaDB',
-			photo: '',
+			photo: '../assets/skills/mariadb.png',
 		},
 		{
 			name: 'PostgreSQL',
-			photo: '',
+			photo: '../assets/skills/postgresql.png',
 		},
 		{
 			name: 'Typescript',
-			photo: '',
+			photo: '../assets/skills/typescript.png',
 		},
 		{
 			name: 'WebSockets',
-			photo: '',
+			photo: '../assets/skills/asana.png',
 		},
 		{
 			name: 'WebRTC',
-			photo: '',
+			photo: '../assets/skills/asana.png',
 		},
 		{
 			name: 'Prisma',
-			photo: '',
+			photo: '../assets/skills/prisma.png',
 		},
 		{
 			name: 'NodeJS',
-			photo: '',
+			photo: '../assets/skills/nodejs.png',
 		},
 		{
 			name: 'ExpressJS',
-			photo: '',
+			photo: '../assets/skills/expressjs.png',
 		},
 
 		{
 			name: 'NestJS',
-			photo: '',
+			photo: '../assets/skills/nestjs.png',
 		},
 
 		{
 			name: 'PHP',
-			photo: '',
+			photo: '../assets/skills/php.png',
 		},
 
 		{
 			name: 'Java',
-			photo: '',
+			photo: '../assets/skills/java.png',
 		},
 
 		{
 			name: 'Python',
-			photo: '',
+			photo: '../assets/skills/python.png',
 		},
 
 		{
 			name: 'C',
-			photo: '',
+			photo: '../assets/skills/c.png',
 		},
 		{
 			name: 'Prolog',
-			photo: '',
+			photo: '../assets/skills/prolog.png',
 		},
 		{
 			name: 'Android Studio',
-			photo: '',
+			photo: '../assets/skills/androidStudio.png',
 		},
 		{
 			name: 'Ionic',
-			photo: '',
+			photo: '../assets/skills/ionic.png',
 		},
 		{
 			name: 'Material UI',
-			photo: '',
+			photo: '../assets/skills/materialUI.png',
 		},
 		{
 			name: 'Chakra UI',
-			photo: '',
+			photo: '../assets/skills/chakraUI.png',
 		},
 		{
 			name: 'Git',
-			photo: '',
+			photo: '../assets/skills/github.png',
 		},
 		{
 			name: 'Slack',
-			photo: '',
+			photo: '../assets/skills/slack.png',
 		},
 		{
 			name: 'Asana',
-			photo: '',
+			photo: '../assets/skills/asana.png',
 		},
 		{
 			name: 'Trello',
-			photo: '',
+			photo: '../assets/skills/trello.png',
 		},
 	];
 
 	return (
 		<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-20 about flex flex-col gap-10 projects">
 			<h3 className="text-center">My Skills</h3>
+			{skills.map((skill, index: number) => (
+				<div key={index}>
+					<Image src={skill.photo} alt={skill.name} width={128} height={128}></Image>
+				</div>
+			))}
 		</div>
 	);
 };

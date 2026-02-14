@@ -1,6 +1,6 @@
+import Navbar from '@/components/ui/navbar';
 import About from '@/components/about';
 import Projects from '@/components/projects';
-import Navbar from '@/components/ui/navbar';
 import Skills from '@/components/skills';
 
 export default function Home() {
