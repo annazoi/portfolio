@@ -36,13 +36,18 @@ const Skills = () => {
 			photo: react,
 		},
 		{
+			name: 'NextJS',
+			photo: nextjs,
+		},
+		{
 			name: 'Javascript',
 			photo: javascript,
 		},
 		{
-			name: 'NextJS',
-			photo: nextjs,
+			name: 'Typescript',
+			photo: typescript,
 		},
+
 		{
 			name: 'HTML',
 			photo: html,
@@ -67,10 +72,7 @@ const Skills = () => {
 			name: 'PostgreSQL',
 			photo: prostgresql,
 		},
-		{
-			name: 'Typescript',
-			photo: typescript,
-		},
+
 		{
 			name: 'WebSockets',
 			photo: react,
