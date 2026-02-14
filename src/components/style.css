@@ -98,6 +98,24 @@
 	font-size: 16px;
 }
 
+.skill {
+	padding: 1.5rem 0.5rem;
+	border-radius: 30px;
+	background-color: #1f1a30;
+	border: 1px solid #1f1a30;
+	transition: all 0.3s linear;
+}
+
+.skill:hover {
+	background-color: #2c2546;
+	border: 1px solid #7564b3;
+	filter: unset;
+}
+
+.skill {
+	filter: brightness(50%);
+}
+
 @media screen and (max-width: 1024px) {
 	.about .text h2,
 	.about .text h3,
@@ -111,5 +129,22 @@
 
 	.about .text p {
 		max-width: unset;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.skill img {
+		max-width: 30px;
+		height: auto;
+	}
+
+	.skill {
+		padding: 0.5rem;
+		filter: brightness(70%);
+		/* filter: unset; */
+	}
+
+	.skill h2 {
+		font-size: 16px;
 	}
 }
