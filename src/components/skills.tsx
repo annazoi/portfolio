@@ -26,6 +26,8 @@ import git from '../assets/skills/github.png';
 import slack from '../assets/skills/slack.png';
 import asana from '../assets/skills/asana.png';
 import trello from '../assets/skills/trello.png';
+import websockets from '../assets/skills/websockets.png';
+import webrtc from '../assets/skills/webrtc.png';
 
 import Image from 'next/image';
 
@@ -75,11 +77,11 @@ const Skills = () => {
 
 		{
 			name: 'WebSockets',
-			photo: react,
+			photo: websockets,
 		},
 		{
 			name: 'WebRTC',
-			photo: react,
+			photo: webrtc,
 		},
 		{
 			name: 'Prisma',
